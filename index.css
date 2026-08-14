@@ -3,13 +3,13 @@
     border: 0;
 }
 
-body{
+body {
     background-color: #e4c77c;
     color: white;
-    height:max-content
+    height: max-content
 }
 
-nav{
+nav {
     width: 100%;
     background-color: #264653;
     /* padding: 10px; */
@@ -36,10 +36,10 @@ nav{
     display: flex;
     gap: 1rem;
     padding: 0px;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
-.nav-links li a{
+.nav-links li a {
     text-decoration: none;
     color: aliceblue;
     transition: 0.3s;
@@ -50,36 +50,38 @@ nav{
     text-shadow: 0 0 5px #2A9D8F;
 }
 
-.btns{
+.btns {
     display: flex;
 }
 
-.btn{
+.btn {
     padding: .5rem 1.5rem;
     border-radius: 30px;
     font-size: 1rem;
     background-color: #2A9D8F;
     box-shadow: 0 0 10px #2A9D8F;
-transition: 0.3s;
-margin-right: 10px;
+    transition: 0.3s;
+    margin-right: 10px;
 }
 
 .btn:hover {
     box-shadow: 0 0 15px #2A9D8F;
-    color: whitesmoke; 
+    color: whitesmoke;
 }
 
-.main-content{
+.main-content {
     background-color: white;
     border-radius: 20px;
+    margin-top: 5px;
 }
 
-.heading-point{
+.heading-point {
     color: #264653;
     margin-left: 20px;
+
 }
 
-.destinations-container{
+.destinations-container {
     margin: 20px;
     min-width: 200px;
     min-height: 275px;
@@ -95,18 +97,70 @@ margin-right: 10px;
     flex-wrap: wrap;
 }
 
-#dudhsagarFalls{
+#dudhsagarFalls {
     background-image: url('./images/dudhsagar1.png');
 }
 
-.main-pd-text{
+.main-pd-text {
     margin: 10px;
 }
 
-.destination-price{
+.destination-price {
     color: goldenrod;
     font-weight: bolder;
     margin-bottom: 10px;
     margin-left: 10px;
-    
+}
+
+#fontainhas {
+    background-image: url('./images/fontainhas1.png');
+}
+
+#bagaB {
+    background-image: url('./images/baga2.png');
+}
+
+#chaporaF {
+    background-image: url('./images/chapora2.png');
+}
+
+#hotels {
+    background-color: blanchedalmond;
+}
+
+.hotel {
+    /* border-radius: 20px; */
+    margin: 10px;
+    padding: 10px;
+}
+
+.hotel-pic {
+    min-width: 200px;
+    min-height: 180px;
+    max-width: 280px;
+    max-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.hotel-description {
+    background-color: aliceblue;
+    min-width: 200px;
+    min-height: 100px;
+    max-width: 280px;
+    max-height: 150px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.hotel-name {
+    color: #264653;
+    margin-left: 10px;
+}
+
+.hyatt-hotel {
+    background-image: url('./images/hotel-pic/hyatt.png')
 }
