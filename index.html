@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoGOA</title>
     <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
 </head>
 
 <body>
@@ -69,12 +70,199 @@
         <div id="hotels">
             <h3 class="heading-point">02-STAY</h3>
             <h1 class="heading-point">Featured Hotels</h1>
+
             <div id="hotelContainer">
+
                 <div class="hotel-container">
+
+                    <!-- First Hotel -->
                     <div class="hotel">
-                        <div class="hotel-pic hyatt-hotel"></div>
+                        <div class="hotel-pic hyatt-hotel">
+                            <div onclick="favBtn()"><img class="fav" id="fav-hyatt" src="./images/gems/w-heart.png"
+                                    alt="nah"></div>
+                        </div>
                         <div class="hotel-description">
-                            <h3 class="hotel-name">Grand Hyatt</h3>
+                            <div class="hotel-d1">
+                                <div>
+                                    <p class="hotel-name">Grand Hyatt</p>
+                                </div>
+                                <div>
+                                    <p class="hotel-rating">8.8</p>
+                                </div>
+                            </div>
+
+                            <div class="hotel-d2">
+                                <div class="hotel-stars">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/gray-star.png" alt="1star">
+                                </div>
+
+                                <div>
+                                    <p class="reviews">· 312 reviews</p>
+                                </div>
+                            </div>
+
+                            <div class="hotel-d3">
+                                <div><img class="stars" src="./images/gems/location-icon.png"
+                                        alt="send location brathar"></div>
+                                <div>
+                                    <p class="reviews">Aldeia de Goa, Bambolim</p>
+                                </div>
+                            </div>
+
+                            <div class="hotel-d4">
+                                <div>
+                                    <p class="price">₹15,660/Night</p>
+                                </div>
+                                <div><button class="hotel-booking">Book Now</button></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Second Hotel -->
+                    <div class="hotel">
+                        <div class="hotel-pic fern-hotel">
+                            <div onclick="favBtn()"><img class="fav" id="fav-hyatt" src="./images/gems/w-heart.png"
+                                    alt="nah"></div>
+                        </div>
+                        <div class="hotel-description">
+                            <div class="hotel-d1">
+                                <div>
+                                    <p class="hotel-name">Fern Kadamba</p>
+                                </div>
+                                <div>
+                                    <p class="hotel-rating">4.3</p>
+                                </div>
+                            </div>
+
+                            <div class="hotel-d2">
+                                <div class="hotel-stars">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                </div>
+
+                                <div>
+                                    <p class="reviews">· 4k reviews</p>
+                                </div>
+                            </div>
+
+                            <div class="hotel-d3">
+                                <div><img class="stars" src="./images/gems/location-icon.png"
+                                        alt="send location brathar"></div>
+                                <div>
+                                    <p class="reviews">Old Goa-Panjim</p>
+                                </div>
+                            </div>
+
+                            <div class="hotel-d4">
+                                <div>
+                                    <p class="price">₹4,725/Night</p>
+                                </div>
+                                <div><button class="hotel-booking">Book Now</button></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Third Hotel -->
+                    <div class="hotel">
+                        <div class="hotel-pic lua-hotel">
+                            <div onclick="favBtn()"><img class="fav" id="fav-hyatt" src="./images/gems/w-heart.png"
+                                    alt="nah"></div>
+                        </div>
+                        <div class="hotel-description">
+                            <div class="hotel-d1">
+                                <div>
+                                    <p class="hotel-name">Lua Nova</p>
+                                </div>
+                                <div>
+                                    <p class="hotel-rating">3.8</p>
+                                </div>
+                            </div>
+
+                            <div class="hotel-d2">
+                                <div class="hotel-stars">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/gray-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/gray-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/gray-star.png" alt="1star">
+                                </div>
+
+                                <div>
+                                    <p class="reviews">· 526 reviews</p>
+                                </div>
+                            </div>
+
+                            <div class="hotel-d3">
+                                <div><img class="stars" src="./images/gems/location-icon.png"
+                                        alt="send location brathar"></div>
+                                <div>
+                                    <p class="reviews">Calangute, Baga</p>
+                                </div>
+                            </div>
+
+                            <div class="hotel-d4">
+                                <div>
+                                    <p class="price">₹2,052/Night</p>
+                                </div>
+                                <div><button class="hotel-booking">Book Now</button></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Fourth Hotel -->
+                    <div class="hotel">
+                        <div class="hotel-pic stonewood-hotel">
+                            <div onclick="favBtn()"><img class="fav" id="fav-hyatt" src="./images/gems/w-heart.png"
+                                    alt="nah"></div>
+                        </div>
+                        <div class="hotel-description">
+                            <div class="hotel-d1">
+                                <div>
+                                    <p class="hotel-name">Stone Wood Riverfront</p>
+                                </div>
+                                <div>
+                                    <p class="hotel-rating">4.2</p>
+                                </div>
+                            </div>
+
+                            <div class="hotel-d2">
+                                <div class="hotel-stars">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/yellow-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/gray-star.png" alt="1star">
+                                    <img class="stars" src="./images/gems/gray-star.png" alt="1star">
+                                </div>
+
+                                <div>
+                                    <p class="reviews">· 960 reviews</p>
+                                </div>
+                            </div>
+
+                            <div class="hotel-d3">
+                                <div><img class="stars" src="./images/gems/location-icon.png"
+                                        alt="send location brathar"></div>
+                                <div>
+                                    <p class="reviews">Kudal, Siolim</p>
+                                </div>
+                            </div>
+
+                            <div class="hotel-d4">
+                                <div>
+                                    <p class="price">₹2,126/Night</p>
+                                </div>
+                                <div><button class="hotel-booking">Book Now</button></div>
+                            </div>
                         </div>
 
                     </div>
