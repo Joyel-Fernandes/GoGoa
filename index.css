@@ -97,10 +97,6 @@ nav {
     flex-wrap: wrap;
 }
 
-#dudhsagarFalls {
-    background-image: url('./images/dudhsagar1.png');
-}
-
 .main-pd-text {
     margin: 10px;
 }
@@ -112,16 +108,20 @@ nav {
     margin-left: 10px;
 }
 
-#fontainhas {
-    background-image: url('./images/fontainhas1.png');
+#localDelicacy {
+    background-image: url('./images/gems/food1.png');
 }
 
-#bagaB {
-    background-image: url('./images/baga2.png');
+#beaches {
+    background-image: url('./images/gems/baga1.png');
 }
 
-#chaporaF {
-    background-image: url('./images/chapora2.png');
+#waterfalls {
+    background-image: url('./images/gems/dudhsagar1.png');
+}
+
+#forts {
+    background-image: url('./images/gems/chapora2.png');
 }
 
 #hotels {
