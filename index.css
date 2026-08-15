@@ -238,14 +238,14 @@ nav {
     justify-content: space-between;
 }
 
-.fern-hotel{
-    background-image:url('./images/hotel-pic/fern.png');
+.fern-hotel {
+    background-image: url('./images/hotel-pic/fern.png');
 }
 
-.lua-hotel{
+.lua-hotel {
     background-image: url('./images/hotel-pic/lua-nova.png')
 }
 
-.stonewood-hotel{
+.stonewood-hotel {
     background-image: url('./images/hotel-pic/stonewood.png');
 }
