@@ -204,3 +204,17 @@ height: 35px;
     font-weight: bold;
 } 
 
+<<<<<<< HEAD
+=======
+.fern-hotel {
+    background-image: url('./images/hotel-pic/fern.png');
+}
+
+.lua-hotel {
+    background-image: url('./images/hotel-pic/lua-nova.png')
+}
+
+.stonewood-hotel {
+    background-image: url('./images/hotel-pic/stonewood.png');
+} 
+>>>>>>> b28b865751856105e2fe38084c19b915513d244f
