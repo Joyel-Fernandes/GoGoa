@@ -24,10 +24,11 @@ nav {
 }
 
 .logo {
-margin-left: 5px;
-}
-#logoImg{
-height: 35px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #2A9D8F;
+    padding-left: 10px;
 }
 
 .nav-links {
@@ -100,7 +101,6 @@ height: 35px;
     justify-content: flex-start;
     align-content: flex-end;
     flex-wrap: wrap;
-    box-shadow: 0 0 10px #264653;
 }
 
 .main-pd-text {
@@ -137,28 +137,123 @@ height: 35px;
 .hotel {
     /* border-radius: 20px; */
     margin: 10px;
+    padding: 10px;
 }
 
-#hotelContainer{
+.hotel-pic {
+    min-width: 200px;
+    min-height: 180px;
+    max-width: 280px;
+    max-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
-#fiveStar{
+.hotel-description {
+    background-color: aliceblue;
+    min-width: 200px;
+    min-height: 105px;
+    max-width: 280px;
+    max-height: 160px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px #264653;
+
+}
+
+.hotel-name {
+    color: #264653;
+    margin-left: 10px;
+    /* margin-top: 5px; */
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.fav {
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+}
+
+.fav:hover {
+    cursor: pointer;
+}
+
+.hyatt-hotel {
     background-image: url('./images/hotel-pic/hyatt.png')
 }
 
-#fourStar{
-    background-image: url('./images/hotel-pic/fairfeild.png')
+.hotel-rating {
+    background-color: #264653;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin: 5px;
 }
 
-#threeStar{
-    background-image: url('./images/hotel-pic/stonewood.png')
+.hotel-d1 {
+    display: flex;
+    justify-content: space-between;
 }
 
-#twoStar{
-    background-image: url('./images/hotel-pic/lua-nova.png');
+.stars {
+    height: 15px;
+}
+
+.hotel-stars {
+    margin-left: 10px;
+}
+
+.reviews {
+    color: grey;
+    font-size: small;
+}
+
+.hotel-d2 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hotel-d3 {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+}
+
+.price {
+    color: #264653;
+    font-weight: bolder;
+    font-size: large;
+    margin-left: 10px;
+}
+
+.hotel-booking {
+    background-color: #e9c46a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.hotel-d4 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fern-hotel {
+    background-image: url('./images/hotel-pic/fern.png');
+}
+
+.lua-hotel {
+    background-image: url('./images/hotel-pic/lua-nova.png')
+}
+
+.stonewood-hotel {
+    background-image: url('./images/hotel-pic/stonewood.png');
 }
 
 #rideOption{
