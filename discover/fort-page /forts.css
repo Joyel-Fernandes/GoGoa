@@ -247,20 +247,20 @@ box-shadow: 0 0 10px #264653;
     justify-content: space-around;
 }
 
-#food1{
-    background-image: url('./images/food1.png');
+#fort1{
+    background-image: url('./fort1.png');
 }
 
-#food2{
-    background-image: url('./images/food2.png');
+#fort2{
+    background-image: url('./fort2.png');
 }
 
-#food3{
-    background-image: url('./images/food3.png');
+#fort3{
+    background-image: url('./fort3.png');
 }
 
-#food4{
-    background-image: url('./images/food4.png');
+#fort4{
+    background-image: url('./fort4.png');
 }
 
 .fern-hotel {
