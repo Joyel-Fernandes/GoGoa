@@ -11,28 +11,32 @@
 
 <body>
     <nav>
-        <div class="logo"><img id="logoImg" src="./images/logo.png" alt="GoGOA"></div>
+        <a href="https://joyel-fernandes.github.io/GoGoa/">
+            <div class="logo"><img id="logoImg" src="./images/logo.png" alt="GoGOA"></div>
+        </a>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Service</a></li>
+            <li><a href="https://joyel-fernandes.github.io/GoGoa/">Home</a></li>
+            <li><a href="./service-page/service.html">Service</a></li>
             <li><a href="#">About</a></li>
         </ul>
         <div class="btns">
-            <button class="btn">Login</button>
+            <a href="./login-page/login.html"> <button class="btn">Login</button></a>
         </div>
     </nav>
 
     <div class="main-content">
-        <h3 class="heading-point">01-EXPLORE</h3>
+        <h3 class="heading-point yellow">01-EXPLORE</h3>
         <h1 class="heading-point">Hidden Gems</h1>
 
         <div id="destinationsImageContainer">
-            <div class="destinations-container" id="localDelicacy">
-                <div>
-                    <h2 class="main-pd-text">Local Delicacy</h2>
-                </div>
 
-            </div>
+            <a href="./hotel-page/localD-page.html" style="text-decoration: none; color: inherit;">
+                <div class="destinations-container" id="localDelicacy" onclick="">
+                    <div>
+                        <h2 class="main-pd-text">Local Delicacy</h2>
+                    </div>
+                </div>
+            </a>
 
             <div class="destinations-container" id="beaches">
                 <div>
@@ -54,9 +58,16 @@
                 </div>
 
             </div>
+
+            <div class="destinations-container" id="religiousPlaces">
+                <div>
+                    <h2 class="main-pd-text">Religious Places</h2>
+                </div>
+
+            </div>
         </div>
         <div id="hotels">
-            <h3 class="heading-point">02-STAY</h3>
+            <h3 class="heading-point yellow">02-STAY</h3>
             <h1 class="heading-point">Featured Hotels</h1>
 
             <div id="hotelContainer">
@@ -89,7 +100,7 @@
         </div>
 
         <div id="transportContainer">
-            <h3 class="heading-point">03-MOVE</h3>
+            <h3 class="heading-point yellow">03-MOVE</h3>
             <h1 class="heading-point">Rides, sorted before you land</h1>
 
             <div id="rideOption">

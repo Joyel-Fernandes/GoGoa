@@ -11,13 +11,13 @@ body {
 
 nav {
     width: 100%;
-    background-color: #264653;
+    background-color: whitesmoke;
     /* padding: 10px; */
     padding-top: 10px;
     padding-bottom: 10px;
     backdrop-filter: blur(10px);
     margin-bottom: .75rem;
-
+box-shadow: 0 0 10px #264653;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,23 +31,29 @@ nav {
     padding-left: 10px;
 }
 
+.logoImg{
+    height: 35px;
+
+}
 .nav-links {
     list-style: none;
     display: flex;
     gap: 1rem;
     padding: 0px;
     justify-content: space-between;
+    ;
 }
 
 .nav-links li a {
     text-decoration: none;
-    color: aliceblue;
+  color: #1a1a2e;
+
     transition: 0.3s;
 }
 
 .nav-links li a:hover {
-    color: #2A9D8F;
-    text-shadow: 0 0 5px #2A9D8F;
+    color: #0f3460;
+    text-shadow: 0 0 5px #0f3460;
 }
 
 .btns {
@@ -58,14 +64,15 @@ nav {
     padding: .5rem 1.5rem;
     border-radius: 30px;
     font-size: 1rem;
-    background-color: #2A9D8F;
-    box-shadow: 0 0 10px #2A9D8F;
+    background-color: #0f3460;
+    box-shadow: 0 0 10px #0f3460;
     transition: 0.3s;
     margin-right: 10px;
+    color: white;
 }
 
 .btn:hover {
-    box-shadow: 0 0 15px #2A9D8F;
+    box-shadow: 0 0 15px #0f3460;
     color: whitesmoke;
 }
 
@@ -146,8 +153,8 @@ nav {
     max-width: 280px;
     max-height: 200px;
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     display: flex;
@@ -156,7 +163,7 @@ nav {
 
 .hotel-description {
     background-color: aliceblue;
-    min-width: 200px;
+    min-width: 280px;
     min-height: 105px;
     max-width: 280px;
     max-height: 160px;
@@ -168,10 +175,9 @@ nav {
 
 .hotel-name {
     color: #264653;
-    margin-left: 10px;
-    /* margin-top: 5px; */
     font-size: x-large;
     font-weight: bolder;
+    margin-top: 5px;
 }
 
 .fav {
@@ -184,10 +190,6 @@ nav {
     cursor: pointer;
 }
 
-.hyatt-hotel {
-    background-image: url('./images/hotel-pic/hyatt.png')
-}
-
 .hotel-rating {
     background-color: #264653;
     padding: 2px 5px;
@@ -197,7 +199,7 @@ nav {
 
 .hotel-d1 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .stars {
@@ -237,11 +239,28 @@ nav {
     padding: 5px 10px;
     border-radius: 5px;
     margin-right: 5px;
+    margin-top: 20px;
 }
 
 .hotel-d4 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+#food1{
+    background-image: url('./images/food1.png');
+}
+
+#food2{
+    background-image: url('./images/food2.png');
+}
+
+#food3{
+    background-image: url('./images/food3.png');
+}
+
+#food4{
+    background-image: url('./images/food4.png');
 }
 
 .fern-hotel {

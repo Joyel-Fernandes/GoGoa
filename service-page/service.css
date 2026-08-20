@@ -1,0 +1,234 @@
+
+  :root {
+    --navy: #17395f;
+    --navy-dark: #0f2a49;
+    --navy-soft: rgba(23, 57, 95, 0.12);
+    --cream: #f2ece0;
+    --ink: #1e2a3a;
+    --muted: #8592a6;
+    --muted-soft: #aeb9c9;
+    --border: #e2e5eb;
+    --white: #ffffff;
+    --radius-lg: 20px;
+    --radius-md: 10px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    font-family: 'Manrope', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background:
+      radial-gradient(ellipse 900px 600px at 8% 12%, rgba(255, 183, 122, 0.16), transparent 60%),
+      radial-gradient(ellipse 820px 700px at 92% 88%, rgba(70, 163, 176, 0.35), transparent 55%),
+      linear-gradient(150deg, #0a1c30 0%, #123453 42%, #0f4a5c 78%, #0c3a4a 100%);
+  }
+
+  .widget {
+    width: 100%;
+    max-width: 940px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 30px 70px -25px rgba(4, 12, 24, 0.55);
+    animation: cardIn 0.5s ease both;
+  }
+
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(14px) scale(0.99); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  /* Tabs */
+  .tabs { display: flex; }
+
+  .tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 20px 16px;
+    border: none;
+    background: var(--cream);
+    color: var(--muted-soft);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  .tab svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+  .tab:hover:not(.active) { color: #8ba0ba; }
+
+  .tab.active {
+    background: var(--white);
+    color: var(--navy);
+    border-bottom-color: var(--navy);
+  }
+
+  /* Panels */
+  .panels { position: relative; }
+
+  .panel { display: none; padding: 34px 36px 32px; }
+
+  .panel.active { display: block; animation: fadeIn 0.3s ease; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .row { display: grid; grid-template-columns: 1.7fr 1fr 1fr; gap: 22px; }
+
+  .row.cols-2 { grid-template-columns: 1fr 1fr; }
+
+  .row + .row { margin-top: 22px; }
+
+  .field label {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 9px;
+  }
+
+  .field input,
+  .field select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--white);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .field input::placeholder { color: var(--muted-soft); }
+
+  .field input:focus,
+  .field select:focus {
+    outline: none;
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px var(--navy-soft);
+  }
+
+  .field select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238592a6' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator,
+  input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.55;
+  }
+
+  /* Stepper */
+  .stepper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 6px 8px;
+    height: 48px;
+  }
+
+  .stepper-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    background: var(--white);
+    color: var(--navy);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+  }
+
+  .stepper-btn:hover:not(:disabled) {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+  }
+
+  .stepper-btn:active:not(:disabled) { transform: scale(0.92); }
+
+  .stepper-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+  .stepper-value { font-size: 15px; font-weight: 700; color: var(--ink); }
+
+  /* Buttons */
+  .field-button { display: flex; flex-direction: column; }
+
+  .btn-primary {
+    width: 100%;
+    flex: 1;
+    min-height: 48px;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+
+  .btn-primary svg { width: 15px; height: 15px; }
+
+  .btn-primary:hover { background: var(--navy-dark); }
+  .btn-primary:active { transform: scale(0.98); }
+
+  .button-row { display: flex; justify-content: flex-end; margin-top: 22px; }
+
+  .btn-compact { width: auto; flex: none; padding: 14px 30px; }
+
+  .status { margin-top: 16px; min-height: 18px; font-size: 13.5px; color: var(--muted); }
+
+  .status.show { color: var(--navy); font-weight: 700; }
+
+  @media (max-width: 720px) {
+    body { padding: 24px 14px; }
+    .row, .row.cols-2 { grid-template-columns: 1fr; }
+    .tab { font-size: 13px; padding: 16px 8px; gap: 6px; }
+    .panel { padding: 26px 20px; }
+    .button-row { justify-content: stretch; }
+    .btn-compact { width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .widget, .panel.active, .tab, .stepper-btn, .btn-primary {
+      animation: none !important;
+      transition: none !important;
+    }
+  }

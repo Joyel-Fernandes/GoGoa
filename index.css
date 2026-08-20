@@ -1,6 +1,9 @@
+@import url('https://googleapis.com');
+
 * {
     margin: 0;
     border: 0;
+    font-family: 'Bodoni Moda', serif ;
 }
 
 body {
@@ -11,7 +14,7 @@ body {
 
 nav {
     width: 100%;
-    background-color: #264653;
+    background-color: whitesmoke;
     /* padding: 10px; */
     padding-top: 10px;
     padding-bottom: 10px;
@@ -21,6 +24,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 0 10px #264653;
 }
 
 .logo {
@@ -40,13 +44,13 @@ height: 35px;
 
 .nav-links li a {
     text-decoration: none;
-    color: aliceblue;
+    color: #1a1a2e;
     transition: 0.3s;
 }
 
 .nav-links li a:hover {
-    color: #2A9D8F;
-    text-shadow: 0 0 5px #2A9D8F;
+    color: #16213e;
+    text-shadow: 0 0 5px #0f3460;
 }
 
 .btns {
@@ -57,14 +61,15 @@ height: 35px;
     padding: .5rem 1.5rem;
     border-radius: 30px;
     font-size: 1rem;
-    background-color: #2A9D8F;
-    box-shadow: 0 0 10px #2A9D8F;
+    background-color: #0f3460;
+    box-shadow: 0 0 10px #0f3460;
     transition: 0.3s;
     margin-right: 10px;
+    color: white;
 }
 
 .btn:hover {
-    box-shadow: 0 0 15px #2A9D8F;
+    box-shadow: 0 0 15px #0f3460;
     color: whitesmoke;
 }
 
@@ -104,11 +109,14 @@ height: 35px;
 }
 
 .main-pd-text {
+    font: sans-serif;
     margin: 10px;
+    -webkit-text-stroke: .5px black;
+    
 }
 
 .destination-price {
-    color: goldenrod;
+    color: #d2b261;
     font-weight: bolder;
     margin-bottom: 10px;
     margin-left: 10px;
@@ -116,6 +124,13 @@ height: 35px;
 
 #localDelicacy {
     background-image: url('./images/food1.png');
+}
+
+.yellow{
+    padding-top: 10px;
+    color: #ffb700;
+ -webkit-text-stroke: .1px black;
+
 }
 
 #beaches {
@@ -128,6 +143,10 @@ height: 35px;
 
 #forts {
     background-image: url('./images/chapora2.png');
+}
+
+#religiousPlaces {
+    background-image: url();
 }
 
 #hotels {
