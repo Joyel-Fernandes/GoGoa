@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-/* ============================================
-   Design tokens — same palette as the booking
-   widget / login page prototypes
-   ============================================ */
 :root {
   --navy: #17395f;
   --navy-dark: #0f2a49;
@@ -47,9 +43,9 @@ body {
     linear-gradient(150deg, #0a1c30 0%, #123453 42%, #0f4a5c 78%, #0c3a4a 100%);
 }
 
-/* ============================================
-   Navigation
-   ============================================ */
+
+   /* Navigation */
+ 
 nav {
   width: 100%;
   background: var(--white);

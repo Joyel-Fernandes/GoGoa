@@ -1,132 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Book a Stay & a Ride</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="./service.css">
-<script src="./service.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Stay & a Ride</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./service.css">
+  <script src="./service.js" defer></script>
 </head>
+
+
+
 <body>
-
-<div class="widget">
-
-  <div class="tabs" role="tablist" aria-label="Booking type">
-    <button type="button" class="tab active" id="tab-hotels" role="tab" aria-selected="true" aria-controls="panel-hotels" data-target="panel-hotels">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 21V5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M13 21v-8a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M7.5 8h1M7.5 11.5h1M7.5 15h1M16.5 15h1M16.5 18h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        <path d="M2 21h20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-      </svg>
-      <span>Hotels</span>
-    </button>
-    <button type="button" class="tab" id="tab-taxis" role="tab" aria-selected="false" aria-controls="panel-taxis" data-target="panel-taxis">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2a2 2 0 0 1 1.9 1.5L21 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="2" y="13" width="20" height="5" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
-        <circle cx="7" cy="18" r="1.4" fill="currentColor"/>
-        <circle cx="17" cy="18" r="1.4" fill="currentColor"/>
-      </svg>
-      <span>Taxis</span>
-    </button>
+  <nav>
+  <a href="https://joyel-fernandes.github.io/GoGoa/">
+    <div class="logo"><img id="logoImg" src="./logo.png" alt="GoGOA"></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="https://joyel-fernandes.github.io/GoGoa/">Home</a></li>
+    <li><a href="./service-page/service.html">Service</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <div class="btns">
+    <a href="./login-page/login.html"> <button class="btn">Login</button></a>
   </div>
+</nav>
+  
+<div class="bdy-min">
+    <div class="widget">
 
-  <div class="panels">
-
-    <form class="panel active" id="panel-hotels" role="tabpanel" aria-labelledby="tab-hotels" novalidate>
-      <div class="row">
-        <div class="field">
-          <label for="destination">Destination</label>
-          <input type="text" id="destination" value="Santorini, Greece" placeholder="Where are you going?" required />
-        </div>
-        <div class="field">
-          <label for="checkin">Check-in</label>
-          <input type="date" id="checkin" value="2026-09-12" required />
-        </div>
-        <div class="field">
-          <label for="checkout">Check-out</label>
-          <input type="date" id="checkout" value="2026-09-17" required />
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="field">
-          <label>Guests</label>
-          <div class="stepper">
-            <button type="button" class="stepper-btn" id="guests-minus" aria-label="Decrease guests">-</button>
-            <span class="stepper-value" id="guests-value" aria-live="polite">2 guests</span>
-            <button type="button" class="stepper-btn" id="guests-plus" aria-label="Increase guests">+</button>
-          </div>
-        </div>
-        <div class="field">
-          <label>Nights</label>
-          <div class="stepper">
-            <button type="button" class="stepper-btn" id="nights-minus" aria-label="Decrease nights">-</button>
-            <span class="stepper-value" id="nights-value" aria-live="polite">3 nights</span>
-            <button type="button" class="stepper-btn" id="nights-plus" aria-label="Increase nights">+</button>
-          </div>
-        </div>
-        <div class="field field-button">
-          <button type="submit" class="btn-primary">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
-              <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            Search
-          </button>
-        </div>
-      </div>
-
-      <div class="status" id="hotels-status" aria-live="polite"></div>
-    </form>
-
-    <form class="panel" id="panel-taxis" role="tabpanel" aria-labelledby="tab-taxis" novalidate>
-      <div class="row cols-2">
-        <div class="field">
-          <label for="pickup">Pickup Location</label>
-          <input type="text" id="pickup" value="Santorini, Greece" placeholder="Enter pickup location" required />
-        </div>
-        <div class="field">
-          <label for="dropoff">Drop-off Location</label>
-          <input type="text" id="dropoff" placeholder="Enter drop-off location" required />
-        </div>
-      </div>
-
-      <div class="row cols-2">
-        <div class="field">
-          <label for="pickup-time">Pickup Date &amp; Time</label>
-          <input type="datetime-local" id="pickup-time" required />
-        </div>
-        <div class="field">
-          <label for="vehicle">Vehicle Type</label>
-          <select id="vehicle">
-            <option>Economy — Comfortable and affordable</option>
-            <option>Comfort — Newer cars, extra legroom</option>
-            <option>XL — Seats up to 6</option>
-            <option>Premium — Luxury cars, top-rated drivers</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="button-row">
-        <button type="submit" class="btn-primary btn-compact">
+      <div class="tabs" role="tablist" aria-label="Booking type">
+        <button type="button" class="tab active" id="tab-hotels" role="tab" aria-selected="true"
+          aria-controls="panel-hotels" data-target="panel-hotels">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
-            <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 21V5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v16" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M13 21v-8a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v8" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M7.5 8h1M7.5 11.5h1M7.5 15h1M16.5 15h1M16.5 18h1" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" />
+            <path d="M2 21h20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
           </svg>
-          Find rides
+          <span>Hotels</span>
+        </button>
+        <button type="button" class="tab" id="tab-taxis" role="tab" aria-selected="false" aria-controls="panel-taxis"
+          data-target="panel-taxis">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2a2 2 0 0 1 1.9 1.5L21 13" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            <rect x="2" y="13" width="20" height="5" rx="1.5" stroke="currentColor" stroke-width="1.8" />
+            <circle cx="7" cy="18" r="1.4" fill="currentColor" />
+            <circle cx="17" cy="18" r="1.4" fill="currentColor" />
+          </svg>
+          <span>Taxis</span>
         </button>
       </div>
 
-      <div class="status" id="taxis-status" aria-live="polite"></div>
-    </form>
+      <div class="panels">
 
+        <form class="panel active" id="panel-hotels" role="tabpanel" aria-labelledby="tab-hotels" novalidate>
+          <div class="row">
+            <div class="field">
+              <label for="destination">Destination</label>
+              <input type="text" id="destination" value="Santorini, Greece" placeholder="Where are you going?"
+                required />
+            </div>
+            <div class="field">
+              <label for="checkin">Check-in</label>
+              <input type="date" id="checkin" value="2026-09-12" required />
+            </div>
+            <div class="field">
+              <label for="checkout">Check-out</label>
+              <input type="date" id="checkout" value="2026-09-17" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label>Guests</label>
+              <div class="stepper">
+                <button type="button" class="stepper-btn" id="guests-minus" aria-label="Decrease guests">-</button>
+                <span class="stepper-value" id="guests-value" aria-live="polite">2 guests</span>
+                <button type="button" class="stepper-btn" id="guests-plus" aria-label="Increase guests">+</button>
+              </div>
+            </div>
+            <div class="field">
+              <label>Nights</label>
+              <div class="stepper">
+                <button type="button" class="stepper-btn" id="nights-minus" aria-label="Decrease nights">-</button>
+                <span class="stepper-value" id="nights-value" aria-live="polite">3 nights</span>
+                <button type="button" class="stepper-btn" id="nights-plus" aria-label="Increase nights">+</button>
+              </div>
+            </div>
+            <div class="field field-button">
+              <button type="submit" class="btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+                  <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                Search
+              </button>
+            </div>
+          </div>
+
+          <div class="status" id="hotels-status" aria-live="polite"></div>
+        </form>
+
+        <form class="panel" id="panel-taxis" role="tabpanel" aria-labelledby="tab-taxis" novalidate>
+          <div class="row cols-2">
+            <div class="field">
+              <label for="pickup">Pickup Location</label>
+              <input type="text" id="pickup" value="Santorini, Greece" placeholder="Enter pickup location" required />
+            </div>
+            <div class="field">
+              <label for="dropoff">Drop-off Location</label>
+              <input type="text" id="dropoff" placeholder="Enter drop-off location" required />
+            </div>
+          </div>
+
+          <div class="row cols-2">
+            <div class="field">
+              <label for="pickup-time">Pickup Date &amp; Time</label>
+              <input type="datetime-local" id="pickup-time" required />
+            </div>
+            <div class="field">
+              <label for="vehicle">Vehicle Type</label>
+              <select id="vehicle">
+                <option>Economy — Comfortable and affordable</option>
+                <option>Comfort — Newer cars, extra legroom</option>
+                <option>XL — Seats up to 6</option>
+                <option>Premium — Luxury cars, top-rated drivers</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="button-row">
+            <button type="submit" class="btn-primary btn-compact">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+                <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Find rides
+            </button>
+          </div>
+
+          <div class="status" id="taxis-status" aria-live="polite"></div>
+        </form>
+
+      </div>
+    </div>
   </div>
-</div>
-
 </body>
+
 </html>

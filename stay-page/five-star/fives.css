@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --navy: #17395f;
+  --navy-dark: #0f2a49;
+  --navy-soft: rgba(23, 57, 95, 0.12);
+  --cream: #f2ece0;
+  --ink: #1e2a3a;
+  --muted: #8592a6;
+  --border: #e2e5eb;
+  --white: #ffffff;
+  --accent: #c17f3a;
+  --radius-lg: 20px;
+  --radius-md: 10px;
+  --font-display: 'Bodoni Moda', Georgia, serif;
+  --font-body: 'Manrope', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--navy);
+  color: var(--white);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse 900px 600px at 8% 10%, rgba(255, 183, 122, 0.16), transparent 60%),
+    radial-gradient(ellipse 820px 700px at 92% 90%, rgba(70, 163, 176, 0.32), transparent 55%),
+    linear-gradient(150deg, #0a1c30 0%, #123453 42%, #0f4a5c 78%, #0c3a4a 100%);
+}
+
+
+   /* Navigation */
+ 
+nav {
+  width: 100%;
+  background: var(--white);
+  padding: 16px 36px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 16px rgba(23, 57, 95, 0.08);
+  transition: box-shadow 0.25s ease, padding 0.25s ease;
+}
+
+nav.scrolled {
+  padding: 11px 36px;
+  box-shadow: 0 10px 30px rgba(23, 57, 95, 0.16);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+#logoImg {
+  height: 34px;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 15px;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.25s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--navy);
+  transition: width 0.25s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--navy);
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.btns {
+  display: flex;
+}
+
+.btn {
+  padding: 0.65rem 1.7rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  background: var(--navy);
+  box-shadow: 0 4px 14px rgba(23, 57, 95, 0.3);
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--navy-dark);
+  box-shadow: 0 8px 20px rgba(23, 57, 95, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 720px) {
+    nav {
+      padding: 12px 20px;
+      flex-wrap: wrap;
+      row-gap: 10px;
+    }
+    .nav-links {
+      gap: 1.3rem;
+      font-size: 14px;
+    }
+    .btn {
+      padding: 0.55rem 1.3rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  .hotel {
+    /* border-radius: 20px; */
+    margin: 10px;
+    padding: 10px;
+}
+
+.hotel-pic {
+    min-width: 200px;
+    min-height: 180px;
+    max-width: 280px;
+    max-height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hotel-description {
+    background-color: aliceblue;
+    min-width: 280px;
+    min-height: 105px;
+    max-width: 280px;
+    max-height: 160px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px #264653;
+
+}
+
+.hotel-name {
+    color: #264653;
+    font-size: x-large;
+    font-weight: bolder;
+    margin-top: 5px;
+}
+
+.fav {
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+}
+
+.fav:hover {
+    cursor: pointer;
+}
+
+.hotel-rating {
+    background-color: #0f2a49;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #e2e5eb;
+}
+
+.hotel-d1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stars {
+    height: 15px;
+}
+
+.hotel-stars {
+    margin-left: 10px;
+}
+
+.reviews {
+    color: grey;
+    font-size: small;
+}
+
+.hotel-d2 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hotel-d3 {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+}
+
+.price {
+    color: #264653;
+    font-weight: bolder;
+    font-size: large;
+    margin-left: 10px;
+}
+
+.hotel-booking {
+    background-color: #e9c46a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+
+.hotel-d4 {
+    display: flex;
+    justify-content: space-around;
+}
+
+#food1{
+    background-image: url('./images/food1.png');
+}
+
+#food2{
+    background-image: url('./images/food2.png');
+}
+
+#food3{
+    background-image: url('./images/food3.png');
+}
+
+#food4{
+    background-image: url('./images/food4.png');
+}
+
+.hyatt-hotel {
+    background-image: url('./hyatt.png');
+}
+
+.lua-hotel {
+    background-image: url('./images/hotel-pic/lua-nova.png')
+}
+
+.stonewood-hotel {
+    background-image: url('./images/hotel-pic/stonewood.png');
+}
