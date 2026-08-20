@@ -237,7 +237,10 @@ h1.heading-point {
   color: var(--white);
   margin: 0 20px 20px;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+  
 }
+
+
 
 .destination-price {
   position: relative;

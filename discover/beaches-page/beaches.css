@@ -247,33 +247,22 @@ box-shadow: 0 0 10px #264653;
     justify-content: space-around;
 }
 
-#food1{
-    background-image: url('./images/food1.png');
+#beach1{
+    background-image: url('./beach1.png');
 }
 
-#food2{
-    background-image: url('./images/food2.png');
+#beach2{
+    background-image: url('./beach2.png');
 }
 
-#food3{
-    background-image: url('./images/food3.png');
+#beach3{
+    background-image: url('./beach3.png');
 }
 
-#food4{
-    background-image: url('./images/food4.png');
+#beach4{
+    background-image: url('./baech4.png');
 }
 
-.fern-hotel {
-    background-image: url('./images/hotel-pic/fern.png');
-}
-
-.lua-hotel {
-    background-image: url('./images/hotel-pic/lua-nova.png')
-}
-
-.stonewood-hotel {
-    background-image: url('./images/hotel-pic/stonewood.png');
-}
 
 #rideOption{
     display: flex;
