@@ -257,30 +257,21 @@ nav.scrolled {
     justify-content: space-around;
 }
 
-#food1{
-    background-image: url('./images/food1.png');
-}
 
-#food2{
-    background-image: url('./images/food2.png');
-}
-
-#food3{
-    background-image: url('./images/food3.png');
-}
-
-#food4{
-    background-image: url('./images/food4.png');
-}
 
 .hyatt-hotel {
     background-image: url('./hyatt.png');
 }
 
-.lua-hotel {
-    background-image: url('./images/hotel-pic/lua-nova.png')
+.hotel2 {
+    background-image: url('./hotel2.png')
 }
 
-.stonewood-hotel {
-    background-image: url('./images/hotel-pic/stonewood.png');
+.hotel3{
+  background-image: url('./hotel3.png');
+
+}
+
+.hotel4{
+  background-image: url('./hotel4.png');
 }
